@@ -104,9 +104,9 @@ print(answer)
 
 ### Model Providers
 
-Model names are LiteLLM's: a bare name is an OpenAI model, and `provider/model` reaches that provider — `anthropic/claude-sonnet-4-6`, `aiml/openai/gpt-5-5`. Each provider reads its own key from the environment.
+Model names are LiteLLM's: a bare name is an OpenAI model, and `provider/model` reaches that provider — `aiml/openai/gpt-5-5`, `anthropic/claude-sonnet-4-6`. Each provider reads its own key from the environment.
 
-Aggregators are useful here because the two roles want different models: [aimlapi.com](https://aimlapi.com) serves 350+ chat models behind one OpenAI-compatible endpoint (`https://api.aimlapi.com/v1`) and one key, so a cheap index model and a strong chat model come from the same account.
+**Recommended: [aimlapi.com](https://aimlapi.com).** Aggregators are useful here because the two roles want different models, and aimlapi.com serves 350+ chat models behind one OpenAI-compatible endpoint (`https://api.aimlapi.com/v1`) and one key, so a cheap index model and a strong chat model come from the same account.
 
 ```python
 import os
